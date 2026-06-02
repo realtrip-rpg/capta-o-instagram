@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matheus Scarparo | Sistema de Aquisição para Negócios Locais em Porto Alegre</title>
-  <meta name="description" content="Você investe em anúncio mas não sabe se dá retorno? Matheus Scarparo constrói sistemas de aquisição, posicionamento e processo de venda para clínicas e lojas em Porto Alegre." />
+  <title>Matheus Scarparo | Sistema de Vendas para Lojas de Colchões e Móveis</title>
+  <meta name="description" content="Dono de loja de colchão ou móveis que depende de fluxo de loja e não tem previsibilidade? Matheus Scarparo constrói o sistema completo: aquisição, rotina comercial, time treinado e CRM funcionando." />
 
-  <!-- Google Tag Manager — substitua GTM-XXXXXXX pelo seu ID real -->
+  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -275,7 +275,7 @@
 
     .problems {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
@@ -290,7 +290,7 @@
     .problem-card__text { font-size: 1rem; line-height: 1.65; color: #c8bfb0; }
     .problem-card__text strong { color: var(--white); }
 
-    /* ════════════ COMO FUNCIONA ════════════ */
+    /* ════════════ MÉTODO / PILARES ════════════ */
     .section {
       padding: 100px 60px;
       max-width: 1200px;
@@ -311,11 +311,116 @@
       font-size: clamp(1.9rem, 3vw, 2.8rem);
       font-weight: 800;
       line-height: 1.1;
-      max-width: 640px;
+      max-width: 680px;
       margin-bottom: 60px;
     }
 
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    /* Pilares grid */
+    .pilares {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .pilar-card {
+      border: 1.5px solid var(--cream);
+      border-radius: 16px;
+      padding: 40px;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .pilar-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 40px #c45c1a12;
+    }
+
+    .pilar-card::before {
+      content: attr(data-num);
+      position: absolute;
+      top: -10px; right: 20px;
+      font-family: 'Fraunces', serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--cream);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .pilar-card__tag {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .pilar-card__title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .pilar-card__sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .pilar-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .pilar-col__label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .pilar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pilar-list li {
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: var(--muted);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .pilar-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .pilar-list.results li { color: var(--ink); font-weight: 500; }
+    .pilar-list.results li::before { content: '✓'; color: #2e8b57; }
+
+    /* ════════════ COMO FUNCIONA ════════════ */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
     .step { border-top: 2px solid var(--cream); padding-top: 28px; }
 
     .step__num {
@@ -329,12 +434,12 @@
 
     .step__title {
       font-family: 'Fraunces', serif;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .step__desc { font-size: 0.92rem; line-height: 1.7; color: var(--muted); }
+    .step__desc { font-size: 0.88rem; line-height: 1.7; color: var(--muted); }
 
     /* ════════════ SOBRE ════════════ */
     .about {
@@ -533,20 +638,67 @@
       to   { opacity: 1; transform: scale(1); }
     }
 
+    /* ════════════ MARCAS ════════════ */
+    .brands-block {
+      margin-top: 72px;
+      padding-top: 48px;
+      border-top: 1.5px solid var(--cream);
+    }
+
+    .brands-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .brand-item {
+      background: var(--white);
+      border: 1.5px solid var(--cream);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .brand-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    @media (max-width: 1100px) {
+      .pilares { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .hero__left { padding: 48px 28px 56px; min-height: auto; }
       .hero__right { padding: 0 20px 60px; }
-      .steps { grid-template-columns: 1fr; gap: 32px; }
       .section { padding: 72px 24px; }
       .section-dark { padding: 72px 24px; }
       .problems { grid-template-columns: 1fr; }
       .about { grid-template-columns: 1fr; gap: 40px; }
       .cta-section { padding: 64px 24px; }
       .form-card { padding: 32px 22px; }
+      .pilar-two-col { grid-template-columns: 1fr; gap: 16px; }
     }
 
-    @media (max-width: 540px) {
+    @media (max-width: 640px) {
+      .steps { grid-template-columns: 1fr; gap: 32px; }
       h1 { font-size: 2rem; }
       .stat-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
       .about__visual { padding: 36px 28px; }
@@ -565,15 +717,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero__left">
       <div class="logo">Matheus Scarparo</div>
       <div class="hero__content">
-        <p class="eyebrow">Porto Alegre · RS</p>
-        <h1>Seu negócio não precisa de <em>mais anúncio.</em> Precisa de um sistema.</h1>
+        <p class="eyebrow">Especialistas em Colchões & Móveis</p>
+        <h1>Sua loja não precisa de <em>mais fluxo.</em> Precisa de um sistema.</h1>
         <p class="hero__sub">
-          Clínicas, lojas e revendedores que dependem só de indicação e não sabem se o investimento em marketing retorna — têm um problema de estrutura, não de verba.
+          Lojas de colchões e móveis que dependem do movimento do shopping ou da indicação — sem saber de onde vem cada venda — têm um problema de estrutura, não de produto.
         </p>
         <div class="hero__pills">
-          <span class="pill">Sistema de Aquisição</span>
-          <span class="pill">Processo de Venda</span>
-          <span class="pill">Posicionamento</span>
+          <span class="pill">Aquisição de Clientes</span>
+          <span class="pill">Rotina Comercial</span>
+          <span class="pill">Time Treinado</span>
+          <span class="pill">CRM Funcionando</span>
         </div>
       </div>
       <p class="hero__sig">Diagnóstico gratuito — sem compromisso.</p>
@@ -581,7 +734,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="hero__right">
       <div class="form-card">
-        <h2 class="form-card__title">Me conta sobre o seu negócio</h2>
+        <h2 class="form-card__title">Me conta sobre a sua loja</h2>
         <p class="form-card__sub">Preencha abaixo. Eu analiso sua situação e entro em contato para um diagnóstico gratuito.</p>
 
         <div class="form-group">
@@ -589,9 +742,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="select-wrap">
             <select id="segmento">
               <option value="" disabled selected>Selecione...</option>
-              <option value="Lojista">Lojista</option>
-              <option value="Dono de Clínica">Dono de Clínica</option>
-              <option value="Planejados (pisos, cerâmica, pedras, móveis)">Planejados (pisos, cerâmica, pedras, móveis)</option>
+              <option value="Loja de Colchões">Loja de Colchões</option>
+              <option value="Loja de Móveis">Loja de Móveis</option>
+              <option value="Loja de Colchões e Móveis">Colchões e Móveis</option>
+              <option value="Franquia de Colchões">Franquia de Colchões</option>
             </select>
           </div>
         </div>
@@ -612,7 +766,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="form-group">
           <label for="instagram">Instagram</label>
-          <input type="text" id="instagram" placeholder="@seuperfil" />
+          <input type="text" id="instagram" placeholder="@sujaloja" />
         </div>
 
         <div class="form-group">
@@ -620,7 +774,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="tel" id="telefone" placeholder="(51) 9 9999-9999" />
         </div>
 
-        <!-- onclick dispara click_diagnostico ANTES de qualquer validação -->
         <button class="btn-submit" id="btn-enviar" onclick="trackCliqueDiagnostico(); enviarFormulario();">
           Quero meu diagnóstico gratuito →
         </button>
@@ -636,71 +789,208 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title-dark">Reconhece alguma dessas situações?</h2>
       <div class="problems">
         <div class="problem-card">
-          <div class="problem-card__icon">📊</div>
-          <p class="problem-card__text"><strong>Investe em anúncio mas não sabe o que retorna.</strong> O dinheiro sai, clientes aparecem às vezes, mas nunca fica claro se valeu a pena.</p>
+          <div class="problem-card__icon">📉</div>
+          <p class="problem-card__text"><strong>Falta de demanda previsível.</strong> O fluxo é instável — tem semana boa e semana morta. O cliente decide online, mas sua loja não está nem no radar.</p>
         </div>
         <div class="problem-card">
-          <div class="problem-card__icon">🔍</div>
-          <p class="problem-card__text"><strong>Seu concorrente aparece no Google, você não.</strong> Quando o cliente busca o serviço na sua região, você simplesmente não existe.</p>
+          <div class="problem-card__icon">🎲</div>
+          <p class="problem-card__text"><strong>Vendas no improviso.</strong> A equipe não tem roteiro, negocia mal, pede desconto sem precisar. Cada venda depende do humor do vendedor naquele dia.</p>
         </div>
         <div class="problem-card">
-          <div class="problem-card__icon">🤝</div>
-          <p class="problem-card__text"><strong>Depende de indicação para sobreviver.</strong> Quando a boca a boca seca, o faturamento seca junto. Não há previsibilidade.</p>
+          <div class="problem-card__icon">💸</div>
+          <p class="problem-card__text"><strong>Margem indo embora.</strong> Frete, desconto e retrabalho corroem o lucro. Você vende, mas no final do mês o número não aparece na conta.</p>
         </div>
         <div class="problem-card">
-          <div class="problem-card__icon">⏱️</div>
-          <p class="problem-card__text"><strong>Não tem tempo para cuidar disso.</strong> Você gerencia o negócio, atende cliente, resolve problema. Marketing fica sempre pra depois.</p>
+          <div class="problem-card__icon">🔄</div>
+          <p class="problem-card__text"><strong>Contratação caótica.</strong> Vendedor novo entra sem treinamento, não bate meta, e sai. O ciclo se repete — e você continua atolado nisso.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card__icon">🧩</div>
+          <p class="problem-card__text"><strong>Zero estratégia comercial.</strong> Você apaga incêndio o dia todo. O marketing vira loteria — hora investe, hora corta — sem saber o que funciona.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card__icon">🌐</div>
+          <p class="problem-card__text"><strong>Concorrência digital engolindo sua loja.</strong> Quem está no Google e no Instagram todo dia está levando os clientes que seriam seus.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- COMO FUNCIONA -->
+  <!-- MÉTODO: 4 PILARES -->
   <section class="section">
-    <p class="section-label-light">Como funciona</p>
-    <h2 class="section-title">Um sistema que transforma interessados em clientes — de forma previsível.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step__num">01</div>
-        <h3 class="step__title">Diagnóstico e Posicionamento</h3>
-        <p class="step__desc">Entendo o seu negócio, seu cliente ideal e o que te diferencia de verdade. Defino sua proposta de valor, oferta e mensagem para atrair quem certo.</p>
+    <p class="section-label-light">Como funciona o trabalho</p>
+    <h2 class="section-title">Um sistema com 4 pilares que transforma lojas comuns em operações de alto faturamento.</h2>
+
+    <div class="pilares">
+
+      <!-- PILAR 1 -->
+      <div class="pilar-card" data-num="01">
+        <span class="pilar-card__tag">Pilar 1</span>
+        <h3 class="pilar-card__title">Direção Comercial</h3>
+        <p class="pilar-card__sub">O cérebro estratégico que guia o crescimento da sua loja.</p>
+        <div class="pilar-two-col">
+          <div>
+            <p class="pilar-col__label">O que fazemos</p>
+            <ul class="pilar-list">
+              <li>Diagnóstico completo: metas, margem, conversão e gargalos</li>
+              <li>Planejamento estratégico mensal</li>
+              <li>Direcionamento para campanhas, equipe e metas semanais</li>
+              <li>Estudos de concorrência e posicionamento</li>
+              <li>Análise dos indicadores de crescimento</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pilar-col__label">O que isso gera</p>
+            <ul class="pilar-list results">
+              <li>Clareza absoluta sobre o negócio</li>
+              <li>Decisões que aumentam lucro</li>
+              <li>Fim da improvisação</li>
+              <li>Operação guiada por estratégia</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step__num">02</div>
-        <h3 class="step__title">Sistema de Aquisição</h3>
-        <p class="step__desc">Monto o caminho completo — da primeira impressão ao contato. Google, Meta, landing page e funil com rastreamento de cada clique e cada real investido.</p>
+
+      <!-- PILAR 2 -->
+      <div class="pilar-card" data-num="02">
+        <span class="pilar-card__tag">Pilar 2</span>
+        <h3 class="pilar-card__title">Aquisição de Clientes</h3>
+        <p class="pilar-card__sub">Leads todos os dias com custo controlado e público certo.</p>
+        <div class="pilar-two-col">
+          <div>
+            <p class="pilar-col__label">O que fazemos</p>
+            <ul class="pilar-list">
+              <li>Gestão completa de tráfego pago (Google e Meta)</li>
+              <li>Criativos profissionais: vídeos, roteiros e copy</li>
+              <li>Landing page de alta conversão</li>
+              <li>Otimização semanal de campanhas</li>
+              <li>Relatórios claros com cada real rastreado</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pilar-col__label">O que isso gera</p>
+            <ul class="pilar-list results">
+              <li>Cliente entrando todos os dias</li>
+              <li>Mais oportunidades qualificadas</li>
+              <li>Menor dependência do fluxo do ponto</li>
+              <li>Crescimento constante do funil</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step__num">03</div>
-        <h3 class="step__title">Processo de Venda</h3>
-        <p class="step__desc">Lead chegando é só metade do trabalho. Estruturo o roteiro de abordagem e follow-up para que você ou seu time converta mais — sem depender de feeling.</p>
+
+      <!-- PILAR 3 -->
+      <div class="pilar-card" data-num="03">
+        <span class="pilar-card__tag">Pilar 3</span>
+        <h3 class="pilar-card__title">Conversão & Rotina de Vendas</h3>
+        <p class="pilar-card__sub">Transformamos vendedores comuns em máquinas de fechar vendas.</p>
+        <div class="pilar-two-col">
+          <div>
+            <p class="pilar-col__label">O que fazemos</p>
+            <ul class="pilar-list">
+              <li>Treinamento contínuo de vendas (gravado + reuniões)</li>
+              <li>Scripts prontos para objeções e fechamento</li>
+              <li>Rotina de vendas diária e semanal</li>
+              <li>Recuperação de oportunidades perdidas</li>
+              <li>Acompanhamento do desempenho de cada vendedor</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pilar-col__label">O que isso gera</p>
+            <ul class="pilar-list results">
+              <li>Mais vendas com o mesmo volume de leads</li>
+              <li>Ticket médio maior</li>
+              <li>Time mais agressivo e preparado</li>
+              <li>Vendas todos os dias, não só quando o fluxo está bom</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      <!-- PILAR 4 -->
+      <div class="pilar-card" data-num="04">
+        <span class="pilar-card__tag">Pilar 4</span>
+        <h3 class="pilar-card__title">Infraestrutura Comercial (CRM)</h3>
+        <p class="pilar-card__sub">Operação organizada, funil no controle, faturamento previsível.</p>
+        <div class="pilar-two-col">
+          <div>
+            <p class="pilar-col__label">O que fazemos</p>
+            <ul class="pilar-list">
+              <li>Implementação completa do CRM</li>
+              <li>Construção dos funis e pipelines</li>
+              <li>Automação das etapas críticas</li>
+              <li>Padronização do processo comercial</li>
+              <li>Acompanhamento do uso pela equipe</li>
+            </ul>
+          </div>
+          <div>
+            <p class="pilar-col__label">O que isso gera</p>
+            <ul class="pilar-list results">
+              <li>Operação organizada</li>
+              <li>Controle total do funil</li>
+              <li>Zero perda de oportunidades</li>
+              <li>Faturamento previsível mês a mês</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- COMO FICA NA PRÁTICA -->
+  <div class="section-dark">
+    <div class="section-dark-inner">
+      <p class="section-label">Como o trabalho acontece</p>
+      <h2 class="section-title-dark">Do diagnóstico à operação rodando — passo a passo.</h2>
+      <div class="steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;">
+        <div class="step" style="border-top:2px solid #ffffff18;padding-top:28px;">
+          <div class="step__num" style="color:#3a3530;">01</div>
+          <h3 class="step__title" style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--paper);">Diagnóstico e Posicionamento</h3>
+          <p class="step__desc" style="font-size:0.88rem;line-height:1.7;color:#8a8070;">Entendemos sua loja, seu cliente ideal e o que te diferencia. Definimos sua proposta de valor, oferta e mensagem para atrair quem certo.</p>
+        </div>
+        <div class="step" style="border-top:2px solid #ffffff18;padding-top:28px;">
+          <div class="step__num" style="color:#3a3530;">02</div>
+          <h3 class="step__title" style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--paper);">Aquisição Ativa</h3>
+          <p class="step__desc" style="font-size:0.88rem;line-height:1.7;color:#8a8070;">Montamos as campanhas, criativos e landing page. Seu cliente ideal começa a chegar todos os dias — com rastreamento de cada real investido.</p>
+        </div>
+        <div class="step" style="border-top:2px solid #ffffff18;padding-top:28px;">
+          <div class="step__num" style="color:#3a3530;">03</div>
+          <h3 class="step__title" style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--paper);">Processo de Venda</h3>
+          <p class="step__desc" style="font-size:0.88rem;line-height:1.7;color:#8a8070;">Estruturamos o roteiro de abordagem, scripts e follow-up para que você ou seu time converta mais — sem depender de improviso ou desconto.</p>
+        </div>
+        <div class="step" style="border-top:2px solid #ffffff18;padding-top:28px;">
+          <div class="step__num" style="color:#3a3530;">04</div>
+          <h3 class="step__title" style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--paper);">CRM e Controle</h3>
+          <p class="step__desc" style="font-size:0.88rem;line-height:1.7;color:#8a8070;">Implementamos o CRM, construímos os funis e automatizamos as etapas críticas. Nenhuma oportunidade cai no esquecimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- QUEM SOU EU -->
-  <section class="section" style="padding-top:0;">
+  <section class="section" style="padding-top:0; padding-bottom:100px;">
     <div class="about">
       <div>
         <span class="about__badge">Quem está por trás disso</span>
-        <h2 class="about__title">Não vim do marketing.<br><em>Vim das vendas.</em></h2>
-        <p class="about__text">Por 2 anos atuei diretamente na linha de frente de negócios locais — construindo estratégias de aquisição, treinando times comerciais e estruturando processos de venda para donos de lojas e empresas no Sul do país.</p>
-        <p class="about__text">Essa vivência me deu algo que academia não ensina: entender o que realmente trava o crescimento de um pequeno negócio. O problema quase nunca é falta de produto bom. É falta de sistema.</p>
-        <p class="about__text highlight">Trabalho com pacotes fechados por projeto — começo, meio e entrega clara. Sem mensalidade infinita que você não sabe o que está pagando.</p>
+        <h2 class="about__title">Parte de uma estrutura<br><em>especialista no setor.</em></h2>
+        <p class="about__text">Sou um canal de aquisição de uma aceleradora especializada exclusivamente em lojas de colchões e móveis — com mais de 8 anos de mercado e presença em toda a América Latina.</p>
+        <p class="about__text">Isso significa que quando você entra em contato comigo, não está falando apenas com um consultor individual — está acessando um sistema testado e validado em mais de 180 lojas do setor, com uma estrutura completa de marketing, comercial e CRM já consolidada.</p>
+        <p class="about__text highlight">Trabalhamos com pacotes fechados por projeto — começo, meio e entrega clara. Sem mensalidade infinita que você não sabe o que está pagando.</p>
       </div>
       <div class="about__visual">
         <div class="stat-grid">
           <div class="stat">
-            <div class="stat__num">2+</div>
-            <div class="stat__label">Anos estruturando vendas em negócios locais</div>
+            <div class="stat__num">8+</div>
+            <div class="stat__label">Anos de experiência exclusiva no setor de colchões e móveis</div>
           </div>
           <div class="stat">
-            <div class="stat__num">3</div>
-            <div class="stat__label">Nichos com conhecimento aprofundado do processo</div>
+            <div class="stat__num">180+</div>
+            <div class="stat__label">Lojas atendidas com o sistema de aceleração</div>
           </div>
           <div class="stat">
-            <div class="stat__num">100%</div>
-            <div class="stat__label">Baseado em dados — sem achismo ou feeling</div>
+            <div class="stat__num">4</div>
+            <div class="stat__label">Pilares integrados em um único sistema contínuo</div>
           </div>
           <div class="stat">
             <div class="stat__num">0</div>
@@ -709,17 +999,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+
+    <!-- MARCAS ATENDIDAS -->
+    <div class="brands-block">
+      <p class="brands-label">Algumas das marcas já atendidas pela nossa estrutura</p>
+      <div class="brands-grid">
+        <span class="brand-item">Americanflex</span>
+        <span class="brand-item">Ânjos Colchões & Sofás</span>
+        <span class="brand-item">Canto Carioca</span>
+        <span class="brand-item">Pelmex</span>
+        <span class="brand-item">Probel</span>
+        <span class="brand-item">Prohouse</span>
+        <span class="brand-item">Decormobi</span>
+        <span class="brand-item">CiaDo Sono</span>
+        <span class="brand-item">Ortobom</span>
+        <span class="brand-item">Loft Brasil</span>
+        <span class="brand-item">SoftLar</span>
+        <span class="brand-item">Casa Brasil</span>
+        <span class="brand-item">Viva Ambiente</span>
+        <span class="brand-item">Casa Móveis</span>
+      </div>
+    </div>
   </section>
 
   <!-- CTA FINAL -->
   <div class="cta-section">
-    <h2>Pronto para saber onde seu negócio está perdendo clientes?</h2>
+    <h2>Pronto para saber onde sua loja está perdendo vendas?</h2>
     <p>O diagnóstico é gratuito. A conversa não compromete.</p>
     <button class="btn-cta-bottom" onclick="scrollToForm()">Preencher o formulário agora →</button>
   </div>
 
   <footer>
-    © 2025 Matheus Scarparo — Porto Alegre, RS · Todos os direitos reservados
+    © 2025 Matheus Scarparo · Todos os direitos reservados
   </footer>
 
 </div>
@@ -732,7 +1043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Recebi suas informações e vou analisar com atenção.<br>Se quiser agilizar, me chame agora no WhatsApp — respondo na hora.</p>
     <a
       id="btn-whatsapp"
-      href="https://wa.me/5551997691081?text=Ol%C3%A1%20Matheus%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20do%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20meu%20neg%C3%B3cio."
+      href="https://wa.me/5551997691081?text=Ol%C3%A1%20Matheus%2C%20acabei%20de%20preencher%20o%20formul%C3%A1rio%20do%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20minha%20loja."
       target="_blank"
       rel="noopener"
       class="btn-whatsapp"
@@ -743,7 +1054,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </svg>
       Chamar no WhatsApp agora
     </a>
-    <p class="obrigado-note">Matheus Scarparo · Porto Alegre, RS</p>
+    <p class="obrigado-note">Matheus Scarparo</p>
   </div>
 </div>
 
@@ -752,14 +1063,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const TG_TOKEN   = '8662938527:AAH1Bv9cz8cd80jNQO6Ig52qLaas30vDILU';
   const TG_CHAT_ID = '1256153072';
 
-  // ── Scroll para o form
   function scrollToForm() {
     const el = document.getElementById('segmento');
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     setTimeout(() => el.focus(), 600);
   }
 
-  // ── Máscara telefone
   document.getElementById('telefone').addEventListener('input', function () {
     let v = this.value.replace(/\D/g, '').substring(0, 11);
     if      (v.length <= 2)  v = v.replace(/(\d{0,2})/, '($1');
@@ -769,21 +1078,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     this.value = v;
   });
 
-  // ── EVENTO 1: clique no botão de diagnóstico (ANTES da validação)
   function trackCliqueDiagnostico() {
     if (window.dataLayer) {
       window.dataLayer.push({ event: 'click_diagnostico' });
     }
   }
 
-  // ── EVENTO 2: clique no botão do WhatsApp (página de obrigado)
   function trackCliqueWhatsapp() {
     if (window.dataLayer) {
       window.dataLayer.push({ event: 'click_whatsapp' });
     }
   }
 
-  // ── Envio do formulário
   async function enviarFormulario() {
     const segmento   = document.getElementById('segmento').value;
     const vendedores = document.getElementById('vendedores').value;
@@ -799,7 +1105,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.textContent = 'Enviando...';
 
     try {
-      // Web3Forms — e-mail
       await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -812,7 +1117,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         })
       });
 
-      // Telegram Bot
       const msg =
         `🔥 *Novo Lead — LP Matheus Scarparo*\n\n` +
         `📌 *Segmento:* ${segmento}\n` +
@@ -826,7 +1130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         body: JSON.stringify({ chat_id: TG_CHAT_ID, text: msg, parse_mode: 'Markdown' })
       });
 
-      // GTM — evento de lead completo
       if (window.dataLayer) {
         window.dataLayer.push({
           event: 'form_lead',
@@ -837,12 +1140,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
       }
 
-      // Troca para página de obrigado
       document.getElementById('page-lp').classList.remove('active');
       document.getElementById('page-obrigado').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'instant' });
 
-      // Virtual pageview GA4
       if (window.dataLayer) {
         window.dataLayer.push({
           event: 'virtualPageview',
